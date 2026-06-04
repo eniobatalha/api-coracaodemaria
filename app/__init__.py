@@ -102,12 +102,16 @@ def create_app(env_name: str = "default") -> Flask:
     from .turmas.routes        import turmas_bp
     from .alunos.routes        import alunos_bp
     from .responsaveis.routes  import responsaveis_bp
+    from .agenda.routes        import agenda_bp
+    from .comunicados.routes   import comunicados_bp
 
     app.register_blueprint(auth_bp,          url_prefix="/api/v1/auth")
     app.register_blueprint(professores_bp,   url_prefix="/api/v1/professores")
     app.register_blueprint(turmas_bp,        url_prefix="/api/v1/turmas")
     app.register_blueprint(alunos_bp,        url_prefix="/api/v1/alunos")
     app.register_blueprint(responsaveis_bp,  url_prefix="/api/v1/responsaveis")
+    app.register_blueprint(agenda_bp,        url_prefix="/api/v1/agenda")
+    app.register_blueprint(comunicados_bp,   url_prefix="/api/v1/comunicados")
 
     # ── Importa models (necessário para Alembic detectar as tabelas) ──────────
     from . import models  # noqa: F401
