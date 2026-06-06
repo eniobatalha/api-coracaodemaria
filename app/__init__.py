@@ -25,7 +25,7 @@ SWAGGER_TEMPLATE = {
             "- **Desenvolvimento:** `http://localhost:5000`\n"
             "- **Documentação:** `http://localhost:5000/docs`\n\n"
             "### Contato\n"
-            "Para dúvidas sobre a API, entre em contato com a equipe de TI."
+            "Para dúvidas sobre a API, entre em contato com o desenvolvedor responsável."
         ),
         "version": "1.0.0",
         "contact": {
